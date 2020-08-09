@@ -759,4 +759,4 @@ print("[+] Success! Solution is: {}".format(solution))
 
 【3】Introduction to angr Part 0 —— https://blog.notso.pro/2019-03-20-angr-introduction-part0/
 
-【4】angr文档翻译 —— https://www.jianshu.com/p/3ecafe701578
+【4】angr文档翻译 —— https://www.jianshu.com/p/3ecafe70157
