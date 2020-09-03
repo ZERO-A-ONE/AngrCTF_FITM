@@ -43,9 +43,11 @@ def Go():
     if simulation.found:
         for i in simulation.found:
             solution_state = i
-            solution = solution_state.posix.dumps(0)
-            print("[+] Success! Solution is: {0}".format(solution.decode('utf-8')))
-            #print(solution0)
+            stored_solutions = solution_state.globals['solutions']
+            scanf0_solution = solution_state.solver.eval(stored_solutions[0])
+            scanf1_solution = solution_state.solver.eval(stored_solutions[1])
+            print("[+] Success! Solution is: {0} {1}".format(scanf0_solution,scanf1_solution))
+            #print(scanf0_solution, scanf1_solution)
     else:
         raise Exception('Could not find the solution')
 
