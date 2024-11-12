@@ -137,7 +137,7 @@ initial_state = project.factory.blank_state(addr=start_address)
 我们从之前知道要注入的两个值位于@ `[EBP - 0x10]`，`[EBP - 0xC]`因此我们需要在压入堆栈之前布置好堆栈指针，这里就需要学习一下Linux的栈，我们先将ESP指针恢复到和EBP指针一致，恢复栈帧初始状态，方便我们计算：
 
 ```python
-initial_state.regs.ebp = initial_state.regs.esp #EBP=ESP
+initial_state.regs.esp = initial_state.regs.ebp #ESP=EBP
 ```
 
 这里我们先整理一下我们所需要的参数在栈上的分布情况
